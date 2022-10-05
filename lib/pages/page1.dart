@@ -1,3 +1,6 @@
+import 'dart:js';
+
+import 'package:custom_transition_route/helpers/route_transitions.dart';
 import 'package:custom_transition_route/pages/page2.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +20,19 @@ class Page1 extends StatelessWidget {
           child: Text("Go to Page 2"),
           color: Colors.white,
           onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => Page2(),
-                ));
+            // Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (_) => Page2(),
+            //     ));
+
             //Navigator.pushNamed(context, "page2");
 
-            //Navigator.push(context, PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) => ,))
+            RouteTransitions(
+              context: context,
+              child: Page2(),
+              animation: AnimationType.fadeIn,
+            );
           },
         ),
       ),
