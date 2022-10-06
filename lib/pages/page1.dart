@@ -1,6 +1,7 @@
-import 'package:custom_transition_route/helpers/route_transitions.dart';
-import 'package:custom_transition_route/pages/page2.dart';
 import 'package:flutter/material.dart';
+import 'package:custom_route_transition_practice/custom_route_transition_practice.dart';
+//import 'package:custom_transition_route/helpers/route_transitions.dart';
+import 'package:custom_transition_route/pages/page2.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({super.key});
@@ -21,9 +22,9 @@ class Page1 extends StatelessWidget {
             RouteTransitions(
               context: context,
               child: Page2(),
-              //animation: AnimationType.fadeIn,
-              //duration: Duration(milliseconds: 100),
-              //replacement: true,
+              animation: AnimationType.fadeIn,
+              duration: Duration(seconds: 2),
+              replacement: true,
             );
           },
         ),
