@@ -18,19 +18,12 @@ class Page1 extends StatelessWidget {
           child: Text("Go to Page 2"),
           color: Colors.white,
           onPressed: () {
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (_) => Page2(),
-            //     ));
-
-            //Navigator.pushNamed(context, "page2");
-
             RouteTransitions(
               context: context,
               child: Page2(),
-              animation: AnimationType.fadeIn,
+              //animation: AnimationType.fadeIn,
               //duration: Duration(milliseconds: 100),
+              //replacement: true,
             );
           },
         ),
